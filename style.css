@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: rgba(202, 223, 8, 0.616);
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(83, 83, 82);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.links-header {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.links-header a {
+    text-decoration: none;
+    color: rgb(83, 83, 82);
+    font-weight: 550;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.links-header a:hover {
+    background-color: rgb(83, 83, 82);
+    color: white;
+}
+
+section.info {
+    background: url(./assets/IMG/background-image.jpg);
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    filter: grayscale(20%);
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(202, 223, 8, 0.616);
+    width: 450px;
+    height: 450px;
+    border-radius: 0 120px 0 120px;
+    gap: 2rem;
+}
+
+.info-text span {
+    font-size: 25px;
+}
+
+.card-ind {
+    width: 350px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(202, 223, 8, 0.616);
+}
+
+.card-ind span {
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    height: 60px;
+}
+
+.card-ind p {
+    margin-left: 13px;
+    font-size: 17px;
+    padding: 5px;
+    font-weight: 500;
+    height: 94px;
+}
+
+.card-ind h1 {
+    text-align: center;
+}
+
+.card-ind img {
+    width: 350px;
+    height: 252.75px;
+}
+
+section#produtos {
+    margin-top: 8rem;
+}
+
+.cards-div {
+    display: grid;
+    grid-gap: 200px;
+    grid-template-columns: repeat(auto-fit, 350px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+section#contato {
+    background-color: rgba(202, 223, 8, 0.616);
+    height: 65%;
+    margin-top: 4rem;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 25px;
+}
+
+section#endereco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    text-align: center;
+    font-size: 21px;
+    padding-bottom: 1rem;
+}
+
+.endereco-info h1:nth-child(2) {
+    margin-top: 2rem;
+}
+
+.hamburguer {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer span {
+    display: flex;
+    flex-direction: column;
+    width: 27px;
+    height: 3px;
+    background-color: rgb(83, 83, 82);
+    margin: 0.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 935px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.menu span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.menu span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .links-header {
+        flex-direction: column;
+        position: absolute;
+        top: 96px;
+        left: -100%;
+        z-index: 2;
+        background-color: rgb(83, 83, 82);
+        color: white;
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .links-header a {
+        color: white;
+    }
+
+    .links-header.menu {
+        left: 0;
+    }
+}
+
+@media (max-width: 470px) {
+    .info-text {
+        width: 95%;
+        text-align: center;
+    }
+
+    section#contato {
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .card-ind {
+        width: 300px;
+        margin-left: 1.6rem;
+    }
+
+    .card-ind img {
+        width: 300px;
+        height: 252.75px;
+    }
+}

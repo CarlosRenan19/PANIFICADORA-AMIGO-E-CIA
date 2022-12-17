@@ -48,7 +48,7 @@ header {
 }
 
 section.info {
-    background: url(./assets/IMG/background-image.jpg);
+    background: url(./background-image.jpg);
     height: 90vh;
     background-position: center;
     background-size: cover;
